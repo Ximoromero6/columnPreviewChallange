@@ -35,14 +35,14 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 850px;
-  height: 500px;
+  max-width: 900px;
+  height: 550px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 main .column {
-  padding: 40px;
+  padding: 45px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
