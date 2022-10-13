@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Colors */
+
+$Bright_orange: hsl(31,
+77%,
+52%);
+$Dark_cyan: hsl(184,
+100%,
+22%);
+$Very_dark_cyan: hsl(179,
+100%,
+13%);
+$Transparent_white: hsla(0,
+0%,
+100%,
+0.75);
+$Very_light_gray: hsl(0,
+0%,
+95%);
+
+/* End colors */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $Very_light_gray;
+}
+
+main {
+    border-radius: 8px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 850px;
+    height: 500px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .column {
+        padding: 40px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        &:nth-child(1) {
+            background-color: $Bright_orange;
+            border-radius: 8px 0 0 8px;
+            .cta {
+                color: $Bright_orange;
+            }
+        }
+        &:nth-child(2) {
+            background-color: $Dark_cyan;
+            .cta {
+                color: $Dark_cyan;
+            }
+        }
+        &:nth-child(3) {
+            background-color: $Very_dark_cyan;
+            border-radius: 0 8px 8px 0;
+            .cta {
+                color: $Very_dark_cyan;
+            }
+        }
+        .imageContainer {
+            width: 60px;
+            height: 60px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .title {
+            text-transform: uppercase;
+            color: $Very_light_gray;
+            font-family: "Big Shoulders Display", cursive;
+            margin: 30px 0;
+            font-size: 36px;
+        }
+        .subTitle {
+            color: $Transparent_white;
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        .cta {
+            display: block;
+            margin-top: auto;
+            margin-right: auto;
+            background-color: $Very_light_gray;
+            border: 2px solid transparent;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover {
+                background-color: transparent;
+                border-color: $Very_light_gray;
+                color: $Very_light_gray;
+            }
+        }
+    }
+    @media(max-width: 768px) {
+        flex-direction: column;
+        .column {
+            &:nth-child(1) {
+                border-radius: 8px 8px 0 0;
+            }
+            &:nth-child(2) {
+                border-radius: 0;
+            }
+            &:nth-child(3) {
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    }
+}
