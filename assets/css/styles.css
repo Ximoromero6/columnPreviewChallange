@@ -118,11 +118,13 @@ main .column .cta {
   border: 2px solid transparent;
   padding: 12px 35px;
   border-radius: 30px;
-  font-weight: 600;
+  font-weight: 500;
   font-family: inherit;
   cursor: pointer;
   -webkit-transition: all .2s;
   transition: all .2s;
+  text-decoration: none;
+  font-size: 13px;
 }
 
 main .column .cta:hover {
@@ -137,6 +139,10 @@ main .column .cta:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
+  }
+  main .column {
+    padding: 35px;
   }
   main .column:nth-child(1) {
     border-radius: 8px 8px 0 0;
@@ -146,6 +152,12 @@ main .column .cta:hover {
   }
   main .column:nth-child(3) {
     border-radius: 0 0 8px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  main .column {
+    padding: 25px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -102,10 +102,12 @@ main {
             border: 2px solid transparent;
             padding: 12px 35px;
             border-radius: 30px;
-            font-weight: 600;
+            font-weight: 500;
             font-family: inherit;
             cursor: pointer;
             transition: all .2s;
+            text-decoration: none;
+            font-size: 13px;
             &:hover {
                 background-color: transparent;
                 border-color: $Very_light_gray;
@@ -115,7 +117,9 @@ main {
     }
     @media(max-width: 768px) {
         flex-direction: column;
+        height: auto;
         .column {
+            padding: 35px;
             &:nth-child(1) {
                 border-radius: 8px 8px 0 0;
             }
@@ -125,6 +129,11 @@ main {
             &:nth-child(3) {
                 border-radius: 0 0 8px 8px;
             }
+        }
+    }
+    @media (max-width: 576px) {
+        .column {
+            padding: 25px;
         }
     }
 }
